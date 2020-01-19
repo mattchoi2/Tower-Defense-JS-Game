@@ -1,0 +1,220 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>
+Canvas
+</TITLE>
+
+<style>
+body {
+background-color:black;
+}
+
+#canvas {
+border-width:5px;
+border-color:white;
+border-style:solid;
+}
+
+#allAlign {
+margin:auto;
+width:800px;
+margin-top:100px;
+text-align:center;
+}
+
+#dir {
+color:white;
+font-size:20px;
+text-align:center;
+}
+
+.hide {
+display:none;
+}
+
+</style>
+
+</HEAD>
+
+<BODY>
+
+<div id="allAlign">
+
+<canvas id="canvas" width="800" height="500">
+</canvas>
+
+</div>
+
+<img class = "hide" id="sky" src="assets/scenery/sky.png">
+<img class = "hide" id="grass" src="assets/scenery/grass.png">
+
+<img class = "hide" id="tower" src="assets/structures/tower.png">
+<img class = "hide" id="cannon" src="assets/structures/cannon.png">
+
+<img class = "hide" id="UI" src="assets/UI/UI.png">
+<img class = "hide" id="levelBox" src="assets/UI/levelBox.png">
+<img class = "hide" id="fireShot" src="assets/UI/fireShot.png">
+<img class = "hide" id="fireShotHover" src="assets/UI/fireShotHover.png">
+<img class = "hide" id="fireShotActive" src="assets/UI/fireShotActive.png">
+<img class = "hide" id="bombShot" src="assets/UI/bombShot.png">
+<img class = "hide" id="bombShotHover" src="assets/UI/bombShotHover.png">
+<img class = "hide" id="bombShotActive" src="assets/UI/bombShotActive.png">
+<img class = "hide" id="sawShot" src="assets/UI/sawShot.png">
+<img class = "hide" id="sawShotHover" src="assets/UI/sawShotHover.png">
+<img class = "hide" id="sawShotActive" src="assets/UI/sawShotActive.png">
+<img class = "hide" id="normalShot" src="assets/UI/normalShot.png">
+<img class = "hide" id="normalShotHover" src="assets/UI/normalShotHover.png">
+<img class = "hide" id="normalShotActive" src="assets/UI/normalShotActive.png">
+<img class = "hide" id="tripleShot" src="assets/UI/tripleShot.png">
+<img class = "hide" id="tripleShotHover" src="assets/UI/tripleShotHover.png">
+<img class = "hide" id="tripleShotActive" src="assets/UI/tripleShotActive.png">
+<img class = "hide" id="textBox" src="assets/UI/textBox.png">
+<img class = "hide" id="textBoxRound" src="assets/UI/textBoxRound.png">
+<img class = "hide" id="next" src="assets/UI/next.png">
+<img class = "hide" id="skip" src="assets/UI/skip.png">
+<img class = "hide" id="nextRound" src="assets/UI/nextRound.png">
+<img class = "hide" id="nextHover" src="assets/UI/nextHover.png">
+<img class = "hide" id="skipHover" src="assets/UI/skipHover.png">
+<img class = "hide" id="nextRoundHover" src="assets/UI/nextRoundHover.png">
+<img class = "hide" id="slowTime" src="assets/UI/slowTime.png">
+<img class = "hide" id="slowTimeHover" src="assets/UI/slowTimeHover.png">
+<img class = "hide" id="powerShot" src="assets/UI/powerShot.png">
+<img class = "hide" id="powerShotHover" src="assets/UI/powerShotHover.png">
+<img class = "hide" id="shop" src="assets/UI/shop.png">
+<img class = "hide" id="shopHover" src="assets/UI/shopHover.png">
+<img class = "hide" id="shopScreen" src="assets/UI/shopScreen.png">
+<img class = "hide" id="town" src="assets/UI/town.png">
+<img class = "hide" id="townHover" src="assets/UI/townHover.png">
+
+<img class = "hide" id="sound" src="assets/sounds/sound.png">
+<img class = "hide" id="noSound" src="assets/sounds/noSound.png">
+
+<img class = "hide" id="townBackground" src="assets/town/town.png">
+<img class = "hide" id="townUI" src="assets/town/townUI.png">
+<img class = "hide" id="townCenter" src="assets/town/townCenter.png">
+<img class = "hide" id="farmHouse1" src="assets/town/farmHouse1.png">
+<img class = "hide" id="farm" src="assets/town/farm.png">
+<img class = "hide" id="farmHover" src="assets/town/farmHover.png">
+<img class = "hide" id="farmActive" src="assets/town/farmActive.png">
+<img class = "hide" id="purchase2" src="assets/town/purchase.png">
+<img class = "hide" id="purchase2Hover" src="assets/town/purchaseHover.png">
+
+<img class = "hide" id="cannonItem" src="assets/shop/cannonItem.png">
+<img class = "hide" id="cannonItemHover" src="assets/shop/cannonItemHover.png">
+<img class = "hide" id="timeItem" src="assets/shop/timeItem.png">
+<img class = "hide" id="timeItemHover" src="assets/shop/timeItemHover.png">
+<img class = "hide" id="textArea" src="assets/shop/textArea.png">
+<img class = "hide" id="itemContain" src="assets/shop/itemContain.png">
+<img class = "hide" id="close" src="assets/shop/close.png">
+<img class = "hide" id="closeHover" src="assets/shop/closeHover.png">
+<img class = "hide" id="purchase" src="assets/shop/purchase.png">
+<img class = "hide" id="purchaseHover" src="assets/shop/purchaseHover.png">
+<img class = "hide" id="gold" src="assets/shop/gold.png">
+
+<img class = "hide" id="mush1" src="assets/enemy/mush1.png">
+<img class = "hide" id="mush2" src="assets/enemy/mush2.png">
+<img class = "hide" id="mush3" src="assets/enemy/mush3.png">
+<img class = "hide" id="mush4" src="assets/enemy/mush4.png">
+<img class = "hide" id="stump1" src="assets/enemy/stump1.png">
+<img class = "hide" id="stump2" src="assets/enemy/stump2.png">
+<img class = "hide" id="stump3" src="assets/enemy/stump3.png">
+<img class = "hide" id="stump4" src="assets/enemy/stump4.png">
+<img class = "hide" id="plant1" src="assets/enemy/plant1.png">
+<img class = "hide" id="plant2" src="assets/enemy/plant2.png">
+<img class = "hide" id="plant3" src="assets/enemy/plant3.png">
+<img class = "hide" id="plant4" src="assets/enemy/plant4.png">
+<img class = "hide" id="plant5" src="assets/enemy/plant5.png">
+<img class = "hide" id="plant6" src="assets/enemy/plant6.png">
+<img class = "hide" id="plant7" src="assets/enemy/plant7.png">
+<img class = "hide" id="plantShoot1" src="assets/enemy/plantShoot1.png">
+<img class = "hide" id="plantShoot2" src="assets/enemy/plantShoot2.png">
+<img class = "hide" id="plantShoot3" src="assets/enemy/plantShoot3.png">
+<img class = "hide" id="plantShoot4" src="assets/enemy/plantShoot4.png">
+<img class = "hide" id="plantShoot5" src="assets/enemy/plantShoot5.png">
+<img class = "hide" id="giantMush1" src="assets/enemy/giantMush1.png">
+<img class = "hide" id="giantMush2" src="assets/enemy/giantMush2.png">
+<img class = "hide" id="giantMush3" src="assets/enemy/giantMush3.png">
+<img class = "hide" id="giantMush4" src="assets/enemy/giantMush4.png">
+
+<img class = "hide" id="poison1" src="assets/effects/poison1.png">
+<img class = "hide" id="poison2" src="assets/effects/poison2.png">
+<img class = "hide" id="poison3" src="assets/effects/poison3.png">
+<img class = "hide" id="poison4" src="assets/effects/poison4.png">
+<img class = "hide" id="fire1" src="assets/effects/fire1.png">
+<img class = "hide" id="fire2" src="assets/effects/fire2.png">
+<img class = "hide" id="fire3" src="assets/effects/fire3.png">
+<img class = "hide" id="fire4" src="assets/effects/fire4.png">
+<img class = "hide" id="fire5" src="assets/effects/fire5.png">
+<img class = "hide" id="fire6" src="assets/effects/fire6.png">
+<img class = "hide" id="fire7" src="assets/effects/fire7.png">
+<img class = "hide" id="boom1" src="assets/effects/boom1.png">
+<img class = "hide" id="boom2" src="assets/effects/boom2.png">
+<img class = "hide" id="boom3" src="assets/effects/boom3.png">
+<img class = "hide" id="boom4" src="assets/effects/boom4.png">
+<img class = "hide" id="boom5" src="assets/effects/boom5.png">
+<img class = "hide" id="boom6" src="assets/effects/boom6.png">
+<img class = "hide" id="boom7" src="assets/effects/boom7.png">
+<img class = "hide" id="boom8" src="assets/effects/boom8.png">
+<img class = "hide" id="boom9" src="assets/effects/boom9.png">
+<img class = "hide" id="boom10" src="assets/effects/boom10.png">
+<img class = "hide" id="boom11" src="assets/effects/boom11.png">
+<img class = "hide" id="boom12" src="assets/effects/boom12.png">
+<img class = "hide" id="boom13" src="assets/effects/boom13.png">
+<img class = "hide" id="boom14" src="assets/effects/boom14.png">
+<img class = "hide" id="boom15" src="assets/effects/boom15.png">
+<img class = "hide" id="boom16" src="assets/effects/boom16.png">
+<img class = "hide" id="boom17" src="assets/effects/boom17.png">
+<img class = "hide" id="boom18" src="assets/effects/boom18.png">
+<img class = "hide" id="ball" src="assets/effects/ball.png">
+<img class = "hide" id="bomb" src="assets/effects/bomb.png">
+<img class = "hide" id="fireball" src="assets/effects/fireball.png">
+<img class = "hide" id="saw" src="assets/effects/saw.png">
+<img class = "hide" id="clock" src="assets/effects/clock.png">
+<img class = "hide" id="cena" src="assets/effects/cena.png">
+<img class = "hide" id="firework" src="assets/effects/firework.png">
+<img class = "hide" id="firework1" src="assets/effects/firework1.png">
+<img class = "hide" id="firework2" src="assets/effects/firework2.png">
+<img class = "hide" id="firework3" src="assets/effects/firework3.png">
+<img class = "hide" id="firework4" src="assets/effects/firework4.png">
+<img class = "hide" id="firework5" src="assets/effects/firework5.png">
+<img class = "hide" id="firework6" src="assets/effects/firework6.png">
+
+<img class = "hide" id="boo1" src="assets/effects/boo1.png">
+<img class = "hide" id="boo2" src="assets/effects/boo2.png">
+<img class = "hide" id="boo3" src="assets/effects/boo3.png">
+<img class = "hide" id="boo4" src="assets/effects/boo4.png">
+<img class = "hide" id="boo5" src="assets/effects/boo5.png">
+<img class = "hide" id="boo6" src="assets/effects/boo6.png">
+<img class = "hide" id="boo7" src="assets/effects/boo7.png">
+<img class = "hide" id="boo8" src="assets/effects/boo8.png">
+<img class = "hide" id="boo9" src="assets/effects/boo9.png">
+<img class = "hide" id="boo10" src="assets/effects/boo10.png">
+<img class = "hide" id="boo11" src="assets/effects/boo11.png">
+
+
+<script src="gam.js"></script>
+<script src="resources.js"></script>
+<script src="class.js"></script>
+<script src="stage.js"></script>
+<script src="cannon.js"></script>
+<script src="controls.js"></script>
+<script src="effects.js"></script>
+<script src="enemy.js"></script>
+<script src="UI.js"></script>
+<script src="abilities.js"></script>
+<script src="round.js"></script>
+<script src="saw.js"></script>
+<script src="level.js"></script>
+<script src="bomb.js"></script>
+<script src="fireball.js"></script>
+<script src="stump.js"></script>
+<script src="plant.js"></script>
+<script src="shop.js"></script>
+<script src="sound.js"></script>
+<script src="debugging.js"></script>
+<script src="town.js"></script>
+</BODY>
+
+</HTML>
